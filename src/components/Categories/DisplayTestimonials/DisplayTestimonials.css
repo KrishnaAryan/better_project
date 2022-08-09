@@ -1,0 +1,20 @@
+.testimonial-wrapper {
+  /* display: flex; */
+  /* justify-content: center; */
+  /* width: 80vw; */
+  /* max-width: 900px; */
+}
+
+.video-card {
+  padding: 1rem;
+  border-radius: 16px;
+}
+.video{
+  box-shadow: 1px 1px 8px #0aaafb;
+}
+@media screen and (max-width: 768px) {
+  .video-card iframe {
+    width: 300px;
+    height: 200px;
+  }
+}

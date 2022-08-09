@@ -1,0 +1,152 @@
+.review-section {
+  display: flex;
+
+  /* margin: 0 10rem 7rem 10rem; */
+  justify-content: center;
+  /* background-color: #0188ccdc; */
+  background-color: var(--dark-color);
+  /* width: 100vw; */
+}
+
+.review-wrapper {
+  box-sizing: border-box;
+  max-width: 1200px;
+
+  background-color: var(--color-palette-1);
+
+  border-radius: 10px;
+  box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.05);
+  transition: 0.2s;
+  clear: both;
+
+  color: #333333;
+}
+
+.review-wrapper h2 {
+  color: white;
+  letter-spacing: 5px;
+  padding: 2rem 0 2rem 0;
+  text-align: center;
+  font-size: 50px;
+}
+
+/* // review */
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  /* padding: 0 3rem; */
+}
+.review {
+  width: 80vw;
+  /* height: 73vh; */
+  display: flex;
+  /* align-items: center; */
+  /* justify-content: center; */
+  margin-right: auto;
+  margin-left: auto;
+  /* padding: 10rem 0; */
+  /* justify-content: center; */
+  /* overflow: scroll; */
+  /* margin-left: 300px; */
+  /* padding-left: 300px; */
+  overflow-x: scroll;
+  overflow-y: hidden;
+  /* padding: 200px; */
+  /* margin-right: -100px; */
+  scroll-behavior: smooth;
+}
+.review::-webkit-scrollbar {
+  height: 0.75rem;
+}
+.review::-webkit-scrollbar-track {
+  /* background: #fff; */
+  border-radius: 1rem;
+  /* box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3); */
+}
+.review::-webkit-scrollbar-thumb {
+  background: rgba(0, 0, 0, 0);
+  border-radius: 1rem;
+  /* box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3); */
+}
+
+figure.snip1192 {
+  font-family: "Raleway", Arial, sans-serif;
+  position: relative;
+  float: left;
+  /* // overflow: hidden; */
+  margin: 10px 1%;
+  min-width: 220px;
+  max-width: 310px;
+  width: 100%;
+  color: #333;
+  text-align: left;
+  box-shadow: none !important;
+  cursor: pointer;
+}
+figure.snip1192 * {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+figure.snip1192 img {
+  max-width: 100%;
+  height: 100px;
+  width: 100px;
+  border-radius: 50%;
+  margin-bottom: 15px;
+  display: inline-block;
+  z-index: 1;
+  position: relative;
+}
+figure.snip1192 blockquote {
+  margin: 0;
+  display: block;
+  border-radius: 8px;
+  position: relative;
+  background-color: #fafafa;
+  padding: 30px 50px 65px 50px;
+  font-size: 0.7em;
+  font-weight: 600;
+  margin: 0 0 -50px;
+  line-height: 1.6em;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.15);
+  height: 380px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+figure.snip1192 blockquote:before,
+figure.snip1192 blockquote:after {
+  font-family: "FontAwesome";
+  content: "\201C";
+  position: absolute;
+  font-size: 50px;
+  opacity: 0.3;
+  font-style: normal;
+}
+figure.snip1192 blockquote:before {
+  top: 35px;
+  left: 20px;
+}
+figure.snip1192 blockquote:after {
+  content: "\201D";
+  right: 20px;
+  bottom: 35px;
+}
+figure.snip1192 .author {
+  margin: 0;
+  text-transform: uppercase;
+  text-align: center;
+  color: #ffffff;
+}
+figure.snip1192 .author h5 {
+  opacity: 0.8;
+  margin: 0;
+  font-weight: 800;
+}
+figure.snip1192 .author h5 span {
+  font-weight: 600;
+  text-transform: none;
+  display: block;
+}

@@ -1,0 +1,297 @@
+.dashboard {
+  padding: 20px 30px;
+  min-height: 100vh;
+  background-repeat: no-repeat !important;
+  background-size: cover !important;
+  background-attachment: fixed !important;
+  position: relative;
+}
+
+.dashboard::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: linear-gradient(0deg, rgba(255, 255, 255, 0) 60%, rgb(0 0 0) 100%);
+  backdrop-filter: blur(10px);
+}
+
+.phases {
+  background: var(--color-gradient);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.phases-header {
+  margin: 24px 24px 0 24px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: var(--light-color);
+}
+
+.dashboard > h2 {
+  color: var(--light-color);
+  position: relative;
+}
+
+.dashboard-subtitle {
+  color: #5c5c5c;
+  margin: 10px 0;
+  font-weight: normal;
+}
+
+.dashboard-subheading {
+  margin: 24px;
+  text-align: center;
+}
+
+.dashboard-subheading > h2 {
+  display: inline;
+  background: var(--color-gradient);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-transform: capitalize;
+  font-size: 1.2rem;
+  margin: 5px 0;
+}
+
+.dashboard-subheading > div {
+  display: inline;
+  color: var(--light-color);
+  font-weight: 500;
+}
+
+.project-payments {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  /* background-color: var(--color-palette-1); */
+  background: var(--color-palette-1) url("../../../assets/AccountBgs/web30.png") center/cover no-repeat;
+  color: #6af3fd;
+  margin: 50px 0px 20px 0px;
+  padding: 20px;
+  border-radius: 15px;
+}
+.project-payments > ul:nth-child(1),
+.project-payments > ul:nth-child(2) {
+  display: flex;
+  width: 100%;
+  justify-content: space-around;
+  align-items: center;
+  margin: 30px 0px;
+  /* flex-wrap: wrap; */
+}
+
+.total-cost {
+  font-size: 40px !important;
+}
+
+.project-payments ul h2 {
+  color: var(--light-color);
+  font-weight: bolder !important;
+  font-size: 30px;
+}
+
+.project-phases {
+  cursor: pointer;
+}
+
+.project-progress-bar {
+  height: 10px !important;
+  border-radius: 10px;
+}
+
+.dashboard-cards {
+  display: grid;
+  align-items: center;
+  justify-content: space-around;
+  grid-template-areas: "card-1 card-2 card-3";
+  grid-gap: 15px;
+  padding: 20px 30px;
+  margin: 30px -15px;
+  overflow: hidden;
+  position: relative;
+}
+
+.dashboard-card-1,
+.dashboard-card-2,
+.dashboard-card-3,.dashboad-phases {
+  box-shadow: 0px 0px 20px #0000008f;
+}
+
+.dashboard-card-1,
+.dashboard-card-3 {
+  background: var(--dark-color) /* url("../../../assets/AccountBgs/web30.png") */;
+  background-size: contain;
+  /* background-attachment: fixed; */
+  background-position: center;
+  background-repeat: no-repeat;
+  /* width: 100%; */
+  min-width: 25vw;
+  height: 200px;
+  border-radius: 30px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+
+.dashboard-card-1 {
+  grid-area: card-1;
+}
+
+.dashboard-card-2 {
+  grid-area: card-2;
+}
+
+.dashboard-card-3 {
+  grid-area: card-3;
+}
+
+.dashboard-card-2 {
+  background: var(--dark-color) /* url("../../../assets/AccountBgs/web30.png") */;
+  background-size: contain;
+  /* background-attachment: fixed; */
+  background-position: center;
+  background-repeat: no-repeat;
+  /* width: 100%; */
+  min-width: 30vw;
+  height: 250px;
+  border-radius: 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  text-align: center;
+}
+
+.dashboard-card-2 h5 {
+  background: var(--color-gradient);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-size: 1.2rem;
+}
+
+.dashboard-card-2 h2 {
+  color: var(--light-color);
+  font-size: 1.5rem;
+}
+
+.dashboard-card-1 h5,
+.dashboard-card-3 h5 {
+  background: var(--color-gradient);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.dashboard-card-1 h2,
+.dashboard-card-3 h2 {
+  color: var(--light-color);
+  font-size: 1rem;
+}
+
+.semicircle-percent-value {
+  background: var(--color-gradient);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-family: "Poppins", sans-serif;
+  font-weight: 700;
+  font-size: 0.8rem;
+}
+
+.dashboad-phases {
+  background: var(--dark-color);
+  overflow: hidden;
+  width: 100%;
+  /* height: auto; */
+  cursor: pointer;
+  position: relative;
+}
+
+/* 
+    overflow: auto;
+    height: 100vh;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+*/
+
+@media screen and (max-width: 1007px) {
+  .dashboard-cards {
+    grid-template-areas:
+      "card-2 card-2"
+      "card-1 card-3";
+    /* width: 100%; */
+    justify-content: stretch;
+  }
+
+  /*   .dashboard-card-1,
+  .dashboard-card-3 {
+    width: auto;
+  } */
+}
+
+@media screen and (max-width: 650px) {
+  .dashboard-cards {
+    grid-template-areas:
+      "card-2 card-2"
+      "card-1 card-1"
+      "card-3 card-3";
+  }
+
+  .dashboard-card-1,
+  .dashboard-card-2,
+  .dashboard-card-3 {
+    min-width: unset;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .project-payments ul {
+    margin: 10px;
+  }
+
+  .project-payments > ul:nth-child(1),
+  .project-payments > ul:nth-child(2) {
+    flex-direction: column;
+    margin: 0;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .dashboard {
+    padding: 20px 15px;
+  }
+  .project-payments ul {
+    font-size: 10px;
+  }
+
+  .total-cost {
+    font-size: 30px !important;
+  }
+
+  .project-payments ul h2 {
+    font-size: 20px;
+  }
+  .dashboard-subtitle {
+    font-size: 13px;
+  }
+
+  .project-payments {
+    font-size: 13px;
+    margin: 35px 0px 20px 0px;
+  }
+}

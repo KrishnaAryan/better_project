@@ -1,0 +1,83 @@
+<div className="myAccount">
+      <MenuIcon setDrawerState={setDrawerState} />
+      <h2>My Account</h2>
+      <h3 className="dashboard-subheading">
+        ID: #<span style={{ color: "#2ce81d", fontWeight: "500" }}>{props.clientID}</span>{" "}
+      </h3>
+      <section className="account-details">
+        <ul>
+          <label htmlFor="change-pfp" className="edit-pfp">
+            <EditRounded fontSize="small" />
+          </label>
+          <input
+            type="file"
+            hidden
+            id="change-pfp"
+            accept={".jpg" || ".png"}
+            onChange={e => handleChange(e)}
+          />
+          <ModalImage
+            small={props.profilePic.Location}
+            medium={props.profilePic.Location}
+            large={props.profilePic.Location}
+            // alt={props.profilePic.Key}
+          />
+        </ul>
+        <ul>
+          <ul>
+            <h3 className="profile-title">Name: </h3>
+            <h3 className="profile-title">Email: </h3>
+            <h3 className="profile-title">Address: </h3>
+            <h3 className="profile-title">D.O.B: </h3>
+            <h3 className="profile-title">Gender: </h3>
+            <h3 className="profile-title">Designation: </h3>
+            <h3 className="profile-title">Company: </h3>
+          </ul>
+          <ul>
+            <h3 className="profile-data">{props.name}</h3>
+            <h3 className="profile-data">{props.personalEmail}</h3>
+            <h3 className="profile-data">{props.address}</h3>
+            <h3 className="profile-data">{props.dob}</h3>
+            <h3 className="profile-data">{props.gender}</h3>
+            <h3 className="profile-data">{props.clientDesignation}</h3>
+            <h3 className="profile-data">{props.clientCompany}</h3>
+          </ul>
+        </ul>
+      </section>
+      {props.adhaarCard || props.panCard || props.identityProofCard ? (
+        <section className="kyc-docs">
+          {props.adhaarCard && (
+            <h4 className="kyc-doc-title">
+              Adhaar Card
+              <a href={props.adhaarCard.Location} target="_blank" rel="noreferrer" className="kyc-docs-items">
+                <InsertDriveFileRounded />
+                <p>{props.adhaarCard.Key}</p>
+              </a>
+            </h4>
+          )}
+          {props.panCard && (
+            <h4 className="kyc-doc-title">
+              Pan Card
+              <a href={props.panCard.Location} target="_blank" rel="noreferrer" className="kyc-docs-items">
+                <InsertDriveFileRounded />
+                <p>{props.panCard.Key}</p>
+              </a>
+            </h4>
+          )}
+          {props.identityProofCard && (
+            <h4 className="kyc-doc-title">
+              Identity Proof
+              <a
+                href={props.identityProofCard.Location}
+                target="_blank"
+                rel="noreferrer"
+                className="kyc-docs-items"
+              >
+                <InsertDriveFileRounded />
+                <p>{props.identityProofCard.Key}</p>
+              </a>
+            </h4>
+          )}
+        </section>
+      ) : null}
+    </div>

@@ -1,0 +1,177 @@
+<MenuIcon setDrawerState={setDrawerState} />
+      <h2>Project Details</h2>
+      <h3 className="projectStatus">
+        Status:{" "}
+        <span
+          style={{ fontWeight: "500", color: projectData.projectStatus === "active" ? "#2ce81d" : "red" }}
+        >
+          {projectData.projectStatus}
+        </span>
+      </h3>
+      <div className="project-data">
+        <section className="project-info">
+          <ModalImage
+            className="project-featured-image"
+            small={projectData?.projectFeaturedImage.Location}
+            medium={projectData?.projectFeaturedImage.Location}
+            large={projectData?.projectFeaturedImage.Location}
+            alt={projectData?.projectFeaturedImage.Key}
+            // style={{ borderRadius: "10px", width: "100%", objectFit: "cover" }}
+          />
+          <ul>
+            <ul>
+              <h4 className="project-subheading-title">
+                ID: <span>{projectData.projectID}</span>
+              </h4>
+              <h4 className="project-subheading-title">
+                Elevation: <span>{projectData.projectElevation}</span>
+              </h4>
+              <h4 className="project-subheading-title">
+                Plot Address: <span>{projectData.projectPlotAddress}</span>
+              </h4>
+              <h4 className="project-subheading-title">
+                Plot Facing: <span>{projectData.projectPlotFacing}</span>
+              </h4>
+            </ul>
+            <ul>
+              <h4 className="project-subheading-title">
+                Plot Size: <span>{projectData.projectPlotSize}</span>
+              </h4>
+              <h4 className="project-subheading-title">
+                Plot Super-Buildup Area: <span>{projectData.projectSuperBuiltupArea}</span>
+              </h4>
+              <h4 className="project-subheading-title">
+                Package: <span>{projectData.projectPackage}</span>
+              </h4>
+              <h4 className="project-subheading-title">
+                Total Cost: <span>₹{projectData.projectCost}</span>
+              </h4>
+            </ul>
+          </ul>
+        </section>
+        {/*         <section className="project-info map">
+          <iframe
+            src="https://www.google.com/maps/place/Bengaluru,+Karnataka/@12.954517,77.3507357,10z/data=!3m1!4b1!4m5!3m4!1s0x3bae1670c9b44e6d:0xf8dfc3e8517e4fe0!8m2!3d12.9715987!4d77.5945627&output=embed"
+            frameBorder="0"
+          ></iframe>
+        </section> */}
+        <section className="project-info project-docs">
+          <ul>
+            {projectData.bookingAgreement && (
+              <h4 className="project-subheading-title">
+                Booking Agreement
+                <a
+                  href={projectData.bookingAgreement.Location}
+                  target="_blank"
+                  rel="noreferrer"
+                  className="project-docs-items"
+                >
+                  <InsertDriveFileRounded />
+                  <p>{projectData.bookingAgreement.Key}</p>
+                </a>
+              </h4>
+            )}
+            {projectData.serviceAgreement && (
+              <h4 className="project-subheading-title">
+                Service Agreement
+                <a
+                  href={projectData.serviceAgreement.Location}
+                  target="_blank"
+                  rel="noreferrer"
+                  className="project-docs-items"
+                >
+                  <InsertDriveFileRounded />
+                  <p>{projectData.serviceAgreement.Key}</p>
+                </a>
+              </h4>
+            )}
+            {projectData.architecturalDesigns && (
+              <h4 className="project-subheading-title">
+                Architectural Designs
+                {projectData.architecturalDesigns.map(({ Key, Location }, i) => {
+                  return (
+                    <a
+                      key={i}
+                      href={Location}
+                      target="_blank"
+                      rel="noreferrer"
+                      className="project-docs-items"
+                    >
+                      <InsertDriveFileRounded />
+                      <p>{Key}</p>
+                    </a>
+                  );
+                })}
+              </h4>
+            )}
+            {projectData.threedDesigns && (
+              <h4 className="project-subheading-title">
+                3D Designs
+                {projectData.threedDesigns.map(({ Key, Location }, i) => {
+                  return (
+                    <a
+                      key={i}
+                      href={Location}
+                      target="_blank"
+                      rel="noreferrer"
+                      className="project-docs-items"
+                    >
+                      <InsertDriveFileRounded />
+                      <p>{Key}</p>
+                    </a>
+                  );
+                })}
+              </h4>
+            )}
+          </ul>
+          <ul>
+            {projectData.RAs && (
+              <h4 className="project-subheading-title">
+                Project RAs
+                {projectData.RAs.map(({ Key, Location }, i) => {
+                  return (
+                    <a
+                      key={i}
+                      href={Location}
+                      target="_blank"
+                      rel="noreferrer"
+                      className="project-docs-items"
+                    >
+                      <InsertDriveFileRounded />
+                      <p>{Key}</p>
+                    </a>
+                  );
+                })}
+              </h4>
+            )}
+            {projectData.paymentSchedule && (
+              <h4 className="project-subheading-title">
+                Payment Schedule
+                <a
+                  href={projectData.paymentSchedule.Location}
+                  target="_blank"
+                  rel="noreferrer"
+                  className="project-docs-items"
+                >
+                  <InsertDriveFileRounded />
+                  <p>{projectData.paymentSchedule.Key}</p>
+                </a>
+              </h4>
+            )}
+            {projectData.workSchedule && (
+              <h4 className="project-subheading-title">
+                Work Schedule
+                <a
+                  href={projectData.workSchedule.Location}
+                  target="_blank"
+                  rel="noreferrer"
+                  className="project-docs-items"
+                >
+                  <InsertDriveFileRounded />
+                  <p>{projectData.workSchedule.Key}</p>
+                </a>
+              </h4>
+            )}
+          </ul>
+        </section>
+      </div>

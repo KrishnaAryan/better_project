@@ -1,0 +1,141 @@
+
+      <Chat
+        props={{
+          id: props.projectData.projectID,
+          name: props.clientData.name,
+          stage: props.projectData.projectStage,
+        }}
+      />
+      <Modal
+        // className={classes.modal}
+        open={modalState}
+        onClose={() => setModalState(false)}
+        closeAfterTransition
+        BackdropComponent={Backdrop}
+        BackdropProps={{
+          timeout: 500,
+        }}
+        style={{ display: "flex", alignItems: "center", justifyContent: "center", width: "100%" }}
+      >
+        <Fade in={modalState}>
+          <section
+            style={{
+              overflowY: "auto",
+              height: "80%",
+              width: "90%",
+              background: "white",
+              borderRadius: "20px",
+              boxShadow: "rgba(0, 0, 0, 0.16) 0px 5px 40px",
+              outline: "none",
+            }}
+          >
+            <Messages projectID={props.projectData.projectID} stage={stage} style="dashboard-message" />
+          </section>
+        </Fade>
+      </Modal>
+      <MenuIcon setDrawerState={setDrawerState} />
+      <h2>
+        Dashboard
+        <h3 className="dashboard-subheading">
+          Ongoing Work:{" "}
+          <span style={{ color: "#2ce81d", fontWeight: "500" }}>{props.projectData.projectStage}</span>{" "}
+        </h3>
+      </h2>
+      <section className="project-payments">
+        <ul style={{ display: "flex", width: "100%", justifyContent: "space-around" }}>
+          <ul>
+            <h5>Total Amount Paid</h5>
+            <h2 style={{ fontWeight: "500" }}>₹{props.projectData.totalAmountPayed}</h2>
+          </ul>
+          <ul>
+            <h5>Total Cost</h5>
+            <h2 className="total-cost">₹{props.projectData.projectCost}</h2>
+          </ul>
+          <ul>
+            <h5>Remaining Amount</h5>
+            <h2 style={{ fontWeight: "500" }}>
+              ₹{props.projectData.projectCost - props.projectData.totalAmountPayed}
+            </h2>
+          </ul>
+        </ul>
+        <ul>
+          <ul>
+            <h5>Next RA/Payment Amount</h5>
+            <h2 style={{ fontWeight: "500" }}>₹{props.projectData.nextRAamount}</h2>
+          </ul>
+          <ul>
+            <ul>
+              <SemiCircleProgressBar
+                percentage={Math.round(percentCompleted)}
+                showPercentValue
+                stroke="#2ce81d"
+                strokeWidth={15}
+              />
+            </ul>
+            <ul style={{ marginTop: "30px" }}>
+              <h4>Progress</h4>
+            </ul>
+          </ul>
+          <ul>
+            <h5>RA/Payment Due Date</h5>
+            <h2 style={{ fontWeight: "500" }}>{props.projectData.nextRAdate}</h2>
+          </ul>
+        </ul>
+      </section>
+      {/* <h4 className="dashboard-subtitle">
+        Progress:{" "}
+        <span style={{ color: "black", fontWeight: "500" }}>{`${Math.round(percentCompleted)}%`}</span>{" "}
+        Completed!
+      </h4>
+      <LinearProgress
+        variant="determinate"
+        value={Math.round(percentCompleted)}
+        className="project-progress-bar"
+      /> */}
+      <h3 style={{ paddingLeft: "24px", color: "var(--color-palette-1)" }}>Phases</h3>
+      <Stepper activeStep={activeStep} orientation="vertical">
+        {commonUpper.map((data, i) => {
+          return (
+            <Step
+              key={i}
+              onClick={() => {
+                i <= activeStep && setModalState(true);
+                i <= activeStep && setStage(data);
+                // console.log(data);
+              }}
+              className="project-phases"
+            >
+              <StepLabel>{data}</StepLabel>
+            </Step>
+          );
+        })}
+        {elevation.map((data, i) => {
+          return (
+            <Step
+              key={i}
+              onClick={() => {
+                i <= activeStep && setModalState(true);
+                i <= activeStep && setStage(data);
+              }}
+              className="project-phases"
+            >
+              <StepLabel>{data}</StepLabel>
+            </Step>
+          );
+        })}
+        {commonLower.map((data, i) => {
+          return (
+            <Step
+              key={i}
+              onClick={() => {
+                i <= activeStep && setModalState(true);
+                i <= activeStep && setStage(data);
+              }}
+              className="project-phases"
+            >
+              <StepLabel>{data}</StepLabel>
+            </Step>
+          );
+        })}
+      </Stepper>
+    

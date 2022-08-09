@@ -1,0 +1,238 @@
+/* Construction  */
+.construction {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+  /* justify-content: center; */
+  /* width: 80vw; */
+
+  /* max-width: 900px; */
+}
+
+.construction-nav {
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+  font-size: 18px;
+}
+
+.construction-nav-item {
+  cursor: pointer;
+  padding: 0.2rem 0.5rem 0.2rem 0.5rem;
+  border-radius: 10px;
+  transition: background-color 0.3s ease;
+  color: var(--light-color);
+}
+.construction-nav-item:hover,
+.active-list {
+  background: var(--light-color);
+  color: var(--dark-color);
+  box-shadow: 1px 1px 8px white;
+}
+.construction-content {
+  min-height: 50vh;
+  background: var(--light-color);
+  flex-grow: 1;
+  flex-basis: 900px;
+  border-radius: 10px;
+  box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.05);
+  transition: 0.2s;
+  color: var(--dark-color);
+}
+
+/* PACKAGES */
+.carousel-wrap{
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: flex-start;
+}
+
+.container-wrap{
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  min-height: 94vh;
+}
+
+.select-packages-container {
+  display: flex;
+  flex-direction: column;
+  /* align-items: center;  */
+  justify-content: space-around;
+  /* margin-bottom: 15px; */
+  flex-wrap: wrap;
+  margin-bottom: 10px;
+}
+
+.select-packages {
+  margin: 20px 0px ;
+  cursor: pointer;
+  font-size: 20px;
+  font-weight: 600;
+  /* font-weight: 700; */
+  letter-spacing: 2px;
+  padding: 1rem;
+  border-radius: 10px;
+  transition: background-color 0.3s ease;
+  text-align: center;
+  box-shadow: 1px 1px 5px #000000;
+}
+
+.select-packages p {
+  font-size: 13px;
+  font-weight: 600;
+  text-align: center;
+}
+
+.select-packages:hover,
+.active-package {
+  background: linear-gradient(to right, #0aaafb, #03e1d2);
+  color: var(--light-color);
+}
+
+.accordian-packages {
+  display: flex;
+  width: 300px;
+
+  /* margin-left: 10rem; */
+  /* justify-content: center; */
+  /* align-items: center; */
+}
+.standard-active {
+  margin-left: 4rem;
+  /* justify-content: flex-end; */
+}
+.premium-active {
+  margin-left: 35rem;
+  /* justify-content: flex-end; */
+}
+
+/* .each-package {
+  padding: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+} */
+
+/* .list-box {
+  align-items: center; 
+  place-items: center;
+  margin-top: 20px;
+  margin-left: 100px;
+ margin-right: auto;
+} */
+
+/* TABLE */
+
+.material-table {
+  border-collapse: collapse;
+  width: 100%;
+  /* font-size: ; */
+  margin: 5px 0;
+  font-size: 0.9em;
+  /* min-width: 400px; */
+}
+
+.material-table thead tr {
+  background: #006d9854;
+  color: #292121;
+  text-align: left;
+  font-weight: bold;
+}
+.material-table th,
+.material-table td {
+  padding: 1rem 1rem;
+}
+
+.material-table tbody tr {
+  border-bottom: 1px solid #dddddd21;
+  cursor: default;
+  color: black;
+}
+.material-table tbody tr:nth-of-type(even) {
+  background-color: rgba(0, 0, 0, 0.075);
+}
+
+.material-table tbody tr:last-of-type {
+  /* border-bottom: 2px solid #009879; */
+}
+.material-table tbody tr:hover {
+  /* font-weight: bold; */
+  /* color: #009879; */
+  /* background-color: rgba(0, 0, 0, 0.274); */
+}
+
+.material-table-container {
+  /* transform: scaleX(0.8); */
+
+  /* overflow: scroll; */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 10px;
+
+  /* transform: scale(0.5); */
+}
+.navLink{
+  text-decoration: none;
+}
+.construction-arrow{
+  display:none;
+}
+
+@media screen and (max-width: 768px) {
+  .construction-arrow{
+    display: flex;
+    position: absolute;
+    color: #0aaafb;
+    height: 30px;
+    top: 50%;
+    right: 58%;
+    opacity: 0.7;
+    animation: slide1 1s ease-in-out infinite;
+  }
+  @keyframes slide1 {
+    0%,
+    100% {
+      transform: translate(0, 0);
+    }
+  
+    50% {
+      transform: translate(10px, 0);
+    }
+  }
+  .construction-nav {
+    display: flex;
+    flex-direction: row;
+    margin: 1rem;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+    font-size: 18px;
+  }
+  .container-wrap{
+    position: relative;
+    left: 160px;
+  }
+  .prem{
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+  .construction-content{
+    overflow: scroll;
+  }
+  .material-table {
+    font-size: 0.7em;
+  }
+  .standard-active {
+    margin-left: 0rem;
+    /* justify-content: flex-end; */
+  }
+  .premium-active {
+    margin-left: 0rem;
+    /* justify-content: flex-end; */
+  }
+}

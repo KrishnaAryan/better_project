@@ -1,0 +1,100 @@
+.chatbox {
+  display: flex;
+  flex-direction: column;
+  width: 400px;
+  height: 80vh;
+  max-height: 550px;
+  background: white;
+  border-radius: 20px;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 5px 40px;
+  overflow: hidden;
+  color: white;
+}
+
+@media screen and (max-width: 480px) {
+  .chatbox {
+    position: absolute;
+    height: 100vh;
+    max-height: 100vh;
+    width: 100vw;
+    bottom: -10px;
+    right: -50px;
+    border-radius: 0px;
+  }
+}
+
+/* .chatbox section {
+  font-size: large;
+  font-weight: 500;
+  padding: 10px 20px;
+  background: white;
+  color: #545454;
+  border-radius: 20px 20px 0px 0px;
+  box-shadow: 0px 3px 20px 1px rgb(0 0 0 / 8%);
+} */
+
+.input-area {
+  box-shadow: 0px -10px 20px 1px rgb(0 0 0 / 8%);
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  text-align: center;
+}
+
+.input-area input {
+  outline: none;
+  height: 50px;
+  width: 80%;
+  padding: 0px 10px 0px 20px;
+  border: 0;
+  font-size: 15px;
+  color: #565656;
+}
+
+.input-area div {
+  background: #00b7ff;
+  height: 50px;
+  width: 20%;
+  cursor: pointer;
+}
+
+.input-area img {
+  width: -webkit-fill-available;
+  height: -webkit-fill-available;
+  padding: 6px;
+}
+
+.input-area div:active {
+  background: #00a0df;
+}
+
+.chatImageLabel {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.chatIcon {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.notification-bubble {
+  background: red;
+  width: 20px;
+  height: 20px;
+  position: absolute;
+  top: -2px;
+  right: -2px;
+  border-radius: 50%;
+  color: var(--light-color);
+  font-family: "Poppins", sans-serif;
+  font-size: 0.8rem;
+  z-index: 1;
+}

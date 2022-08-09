@@ -1,0 +1,48 @@
+
+      <section>
+        <MenuIcon setDrawerState={setDrawerState} />
+        <h2>Gallery</h2>
+      </section>
+      <section className="image-carousel">
+        <Swiper
+          loop={true}
+          autoplay={{
+            delay: 3000,
+            disableOnInteraction: false,
+          }}
+          thumbs={{ swiper: thumbsSwiper }}
+          pagination={{
+            type: "fraction",
+          }}
+          navigation={true}
+          className="mySwiper"
+        >
+          {images.map(({ link, name }, i) => {
+            return (
+              <SwiperSlide key={i}>
+                <img src={link} alt={name} style={{ width: "100%", objectFit: "contain", height: "100%" }} />
+              </SwiperSlide>
+            );
+          })}
+        </Swiper>
+      </section>
+      <section className="swiper-thumb">
+        <Swiper
+          watchSlidesProgress
+          onSwiper={setThumbsSwiper}
+          // centeredSlides
+          loop={true}
+          slidesPerView={4}
+          freeMode={true}
+          spaceBetween={10}
+        >
+          {images.map(({ link, name }, i) => {
+            return (
+              <SwiperSlide key={i}>
+                <img src={link} alt={name} style={{ width: "100%", objectFit: "contain", height: "100%" }} />
+              </SwiperSlide>
+            );
+          })}
+        </Swiper>
+      </section>
+    

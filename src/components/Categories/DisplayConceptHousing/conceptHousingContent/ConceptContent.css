@@ -1,0 +1,51 @@
+.concept-about-container{
+    padding: 40px;
+    position: relative;
+}
+/* .concept-about-container:before{
+    content: 'Coming Soon';
+    font-size: 40px;
+    width: 100%;
+    height: 100%;
+    backdrop-filter: blur(5px);
+    padding: 0;
+    color: black;
+    font-weight: 600;
+    position: absolute;
+    top: 0%; 
+    left: 0;
+    z-index: 9999;  
+    display:flex;
+    justify-content:center;
+    align-items:center;
+} */
+.concept-process-container{
+    padding: 5px;
+    min-height: 30vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: no-repeat center;
+    background-size: cover;
+    position: relative;
+}
+/* .concept-process-container:before{
+    content: 'Coming Soon';
+    font-size: 40px;
+    width: 100%;
+    height: 100%;
+    backdrop-filter: blur(5px);
+    padding: 0;
+    color: black;
+    font-weight: 600;
+    position: absolute;
+    top: 0%; 
+    z-index: 9999;  
+    display:flex;
+    justify-content:center;
+    align-items:center;
+} */
+.concept-process-img{
+    width: 100%;
+}

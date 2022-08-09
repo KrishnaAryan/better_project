@@ -1,0 +1,13 @@
+.gallery-section {
+  padding: 3rem 0rem;
+}
+
+.gallery-marq {
+  padding: 0.3rem;
+  overflow: hidden;
+}
+.gallery-marq img {
+  height: 200px;
+  padding: 1rem;
+  border-radius: 25px;
+}

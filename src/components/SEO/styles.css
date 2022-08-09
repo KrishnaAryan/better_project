@@ -1,0 +1,25 @@
+.seo-main {
+  text-align: justify;
+  color: var(--dark-color);
+  margin-top: 4rem;
+  padding: 5rem 2rem 0rem 2rem;
+}
+
+.seo-main h2 {
+  font-size: 45px;
+  text-align: left;
+}
+
+.seo-main h3 {
+  margin-top: 20px;
+}
+
+.seo-list {
+  padding-left: 2rem;
+}
+
+@media screen and (max-width: 480px) {
+  .seo-main h2 {
+    font-size: 30px;
+  }
+}
